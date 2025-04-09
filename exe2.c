@@ -1,18 +1,22 @@
 #include <stdio.h>
 
-int main() {
-    int numero;
-    int soma = 0;
-    
-    while(1) {
-        printf("Digite um número de 1 a 6: ");
-        scanf("%d", &numero);
-        
-        if (numero % 2 != 0) {
-            break;
-        }
-        soma += numero;
-    }
-    printf("Jogo encerrado! Soma dos números pares: %d\n", soma);
-    return 0;
+int sub3(int x);
+
+int main(void) {
+  int numero;
+  printf("Digite um número: ");
+  scanf("%d", &numero);
+  
+  printf("recebido: %d\n", numero);
+  
+  int resultado = sub3(numero);
+
+  printf("resultado: %d\n", resultado);
+  
+  printf("Atual: %d\n", numero);
+  return 0;
+}
+
+int sub3(int x) {
+  return x - 3;
 }
